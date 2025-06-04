@@ -25,12 +25,3 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-let resizeTimeout;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    console.log("Reloading to apply layout updates...");
-    location.reload();
-  }, 700);
-});
