@@ -1,0 +1,47 @@
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+
+#responsive {
+  .devices {
+    position: relative;
+    height: 300px;
+
+    @include responsive($s) {
+      height: 530px;
+    }
+
+    @include responsive($m) {
+      height: 650px;
+    }
+
+    @include responsive($xl) {
+      height: 820px;
+    }
+  }
+
+  .d {
+    border-radius: 8px;
+    @include borderShadow;
+    @include positionCenter;
+  }
+
+  .d1 {
+    @include deviceSize(1920px);
+  }
+
+  .d2 {
+    @include deviceSize(1512px);
+  }
+
+  .d3 {
+    @include deviceSize(1024px);
+  }
+
+  .d4 {
+    @include deviceSize(786px);
+  }
+
+  .d5 {
+    @include deviceSize(430px);
+  }
+}

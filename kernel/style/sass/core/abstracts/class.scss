@@ -1,0 +1,24 @@
+// class.scss
+@use "../abstracts/variables.scss" as *;
+.block {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.none {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.blood{
+  font-family: $poiretOneFont;
+  color: $distinctiveTextColor;
+}

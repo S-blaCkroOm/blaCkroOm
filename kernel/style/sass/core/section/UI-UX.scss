@@ -1,0 +1,39 @@
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+#uiUx {
+  .websiteGrid {
+    padding: 5px;
+    margin: 50px auto;
+    @include websitewahm(1920px,1080px);
+    @include borderShadow;
+    @include grid12;
+    gap: 5px;
+    border-radius: 8px;
+    header,
+    aside,
+    main,
+    footer {
+      border-radius: 8px;
+      @include border;
+      @include flexCenter;
+      @include responsive($xl){
+        &:hover{
+          background-color: $distinctiveTextColor
+        }
+        cursor: pointer;
+      }
+    }
+    header {
+      @include gridArea(1, -1, 1, 3);
+    }
+    aside {
+      @include gridArea(1, 3, 3, -1);
+    }
+    main {
+      @include gridArea(3, -1, 3, 10);
+    }
+    footer {
+      @include gridArea(3, -1, 10, -1);
+    }
+  }
+}

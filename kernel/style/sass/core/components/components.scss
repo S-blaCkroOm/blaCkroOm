@@ -1,0 +1,12 @@
+// components.scss
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+button {
+  @include borderShadow;
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+section {
+  @include lineBottom;
+}
+

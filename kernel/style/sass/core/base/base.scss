@@ -1,0 +1,36 @@
+// base.scss
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+html {
+  font-size: 62.5%;
+  
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: $outfitFont, $sansSerif;
+  color: $mainTextColor;
+  font-size: 16px;
+  background-color:$mainBackgroundColor;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  line-height: normal;
+}
+#smoothWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+#smoothContent {
+  will-change: transform;
+}
+section {
+  will-change: transform;
+}

@@ -1,0 +1,134 @@
+//mixin.scss
+@use "./variables.scss" as *;
+////////////////////? fontSize ///////////////////////////
+@mixin fontSizeRisponsive($base-size, $increment, $font-weight: 400) {
+  font-weight: $font-weight;
+  font-size: $base-size;
+
+  @include responsive($s) {
+    font-size: calc(#{$base-size} + #{$increment});
+  }
+  @include responsive($m) {
+    font-size: calc(#{$base-size} + #{$increment * 2});
+  }
+  @include responsive($l) {
+    font-size: calc(#{$base-size} + #{$increment * 3});
+  }
+
+  @include responsive($xl) {
+    font-size: calc(#{$base-size} + #{$increment * 4});
+  }
+}
+////////////////////? border & shadow ///////////////////////////
+@mixin border {
+  border: 1px solid $borderColor;
+}
+//////////////////////// * ////////////////////////
+@mixin lineBottom {
+  border-bottom: 1px solid $lineColor;
+}
+//////////////////////// * ////////////////////////
+@mixin lineLeft {
+  border-left: 1px solid $lineColor;
+}
+//////////////////////// * ////////////////////////
+@mixin lineRight {
+  border-right: 1px solid $lineColor;
+}
+//////////////////////// * ////////////////////////
+@mixin lineTop {
+  border-top: 1px solid $lineColor;
+}
+//////////////////////// * ////////////////////////
+@mixin shadow {
+  box-shadow: 0 0 4px $shadowColor, 0 0 6px rgba($shadowColor, 0.6),
+    0 0 8px rgba($shadowColor, 0.5), 0 0 10px rgba($shadowColor, 0.4);
+}
+//////////////////////// * ////////////////////////
+@mixin borderShadow {
+  @include border;
+  @include shadow;
+}
+////////////////////? resposive ///////////////////////////
+@mixin responsive($devices) {
+  @media #{$devices} {
+    @content;
+  }
+}
+////////////////////? background ///////////////////////////
+@mixin backgroundCenter {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+////////////////////? flex ///////////////////////////
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+////////////////////? grid ///////////////////////////
+@mixin grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: repeat(12, auto);
+}
+//////////////////////// * ////////////////////////
+@mixin gridArea($colStart, $colEnd, $rowStart, $rowEnd) {
+  grid-column: #{$colStart} / #{$colEnd};
+  grid-row: #{$rowStart} / #{$rowEnd};
+}
+////////////////////? position ///////////////////////////
+@mixin positionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+//////////////////////// * ////////////////////////
+@mixin restPosition {
+  position: relative;
+  top: unset;
+  left: unset;
+}
+////////////////////? private ///////////////////////////
+
+@mixin deviceSize($base) {
+  width: calc(#{$base} / 6);
+
+  @include responsive($s) {
+    width: calc(#{$base} / 3);
+  }
+
+  @include responsive($m) {
+    width: calc(#{$base} / 2.4);
+  }
+
+  @include responsive($xl) {
+    width: calc(#{$base} / 1.9);
+  }
+}
+@mixin websitewahm($width, $height) {
+  width: calc(#{$width} / 6);
+  height: calc(#{$height} / 6);
+
+  @include responsive($s) {
+    width: calc(#{$width} / 3);
+    height: calc(#{$height} / 3);
+    gap: 8px;
+    padding: 8px;
+  }
+
+  @include responsive($m) {
+    width: calc(#{$width} / 2.4);
+    height: calc(#{$height} / 2.4);
+  }
+
+  @include responsive($xl) {
+    width: calc(#{$width} / 1.9);
+    height: calc(#{$height} / 1.9);
+  }
+}
+
+

@@ -1,0 +1,103 @@
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+
+#hero {
+  .whoAmI {
+    @include responsive($s) {
+      @include grid12;
+    }
+  }
+
+  .video {
+    @include lineBottom;
+    background-color: rgba(12,12,12);
+    filter: brightness(0.8);
+  }
+
+  h2 {
+    @include responsive($s) {
+      @include gridArea(1, -1, 1, 2);
+    }
+
+    @include responsive($m) {
+      @include gridArea(1, 9, 1, 2);
+      padding-bottom: unset;
+    }
+
+    @include responsive($l) {
+      @include gridArea(1, 10, 1, 2);
+    }
+
+    @include responsive($xl) {
+      @include gridArea(1, 11, 1, 2);
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+
+    @include responsive($s) {
+      @include gridArea(1, 9, 2, 3);
+    }
+
+    @include responsive($l) {
+      @include gridArea(1, 10, 2, 3);
+    }
+
+    @include responsive($xl) {
+      @include gridArea(1, 11, 2, 3);
+    }
+  }
+
+  .image {
+    @include borderShadow;
+    width: 80%;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    border-radius: 8px;
+
+    @include responsive($s) {
+      @include gridArea(9, -1, 2, -1);
+      width: unset;
+      margin: unset;
+      border-radius: unset;
+      box-shadow: unset;
+      border: unset;
+      @include lineLeft;
+      background-color: #000;
+    }
+
+    @include responsive($m) {
+      @include gridArea(9, -1, 1, -1);
+    }
+
+    @include responsive($l) {
+      @include gridArea(10, -1, 1, -1);
+    }
+
+    @include responsive($xl) {
+      @include gridArea(11, -1, 1, -1);
+    }
+
+    .me {
+      filter: brightness(0.3);
+    }
+  }
+
+  .btn {
+    margin-bottom: 50px;
+    @include flexCenter;
+
+    @include responsive($s) {
+      @include gridArea(1, 9, 3, -1);
+    }
+
+    @include responsive($l) {
+      @include gridArea(1, 10, 3, -1);
+    }
+
+    @include responsive($xl) {
+      @include gridArea(1, 11, 3, -1);
+    }
+  }
+}

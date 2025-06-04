@@ -1,0 +1,21 @@
+//font.scss
+@font-face {
+  font-family: "Outfit";
+  src: url("/kernel/vault/font/Outfit/Outfit-Thin.woff2") format("woff2"),
+    url("/kernel/vault/font/Outfit/Outfit-Thin.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("/kernel/vault/font/PoiretOne/PoiretOne-Regular.woff2")
+      format("woff2"),
+    url("/kernel/vault/font/PoiretOne/PoiretOne-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("/kernel/vault/font/cairo/Cairo-Regular.woff2")
+      format("woff2"),
+    url("/kernel/vault/font/cairo/Cairo-Regular.woff") format("woff");
+  font-display: swap;
+}

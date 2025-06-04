@@ -1,0 +1,32 @@
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+#portfolio {
+  overflow: hidden;
+
+  .carts {
+    margin: 50px 15px;
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+
+    .cart {
+      @include flexCenter;
+      cursor: pointer;
+      text-align: center;
+      width: clamp(150px, 20vw, 450px);
+      aspect-ratio: 1 / 1.8;
+      border-radius: 8px;
+      flex-shrink: 0;
+      background-image: linear-gradient(
+        $mainBackgroundColor,
+        $distinctiveTextColor
+      );
+      &:hover {
+        background-image: linear-gradient(
+          $distinctiveTextColor,
+          $mainBackgroundColor
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+//variables.scss
+$s: "only screen and (min-width: 768px)";
+$m: "only screen and (min-width: 1024px)";
+$l: "only screen and (min-width: 1280px)";
+$xl: "only screen and (min-width: 1400px)";
+////////////////////////////font//////////////////////////////////////
+$sansSerif: sans-serif;
+$outfitFont: "Outfit";
+$poiretOneFont: "Poiret One";
+$Cairo: "Cairo";
+$inherit: "inherit";
+////////////////////////////$Color//////////////////////////////////////
+$mainTextColor: #a9a9a9;
+$navTextColor: #777777;
+$distinctiveTextColor: #7e0d13;
+//////////////////////////////////////////
+$mainBackgroundColor: #0f0f0f;
+$headerAndNavBackground: rgba($mainBackgroundColor, 0.5);
+//////////////////////////////////////////
+$borderColor: rgba(70, 70, 70);
+$shadowColor: #323232;
+$lineColor: #323232;
+//////////////////////////////////////////
+$hoverMainTextColor: #0f0f0f;
+$hoverDixtinctiveTextColor: #7e0d13;
+$hoverbackgroundColor: #a9a9a9;
+$hoverShadowColor: #000;
+$hoverBorderColor: #000;

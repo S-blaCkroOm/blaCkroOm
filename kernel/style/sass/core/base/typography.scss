@@ -1,0 +1,47 @@
+// typography.scss
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+#hero,
+#responsive,
+#performance,
+#uiUx,
+#language,
+#portfolio,
+#contact {
+  h2 {
+    @include fontSizeRisponsive(2.5rem, 1rem, 700);
+    margin: 0 15px;
+    padding: 15px 0;
+    @include lineBottom;
+  }
+  p {
+    padding-top:15px ;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include fontSizeRisponsive(1.5rem, 0.25rem, 700);
+  }
+}
+button{
+    @include fontSizeRisponsive(3rem,.5rem,700)
+}
+#performance p, #portfolio p{
+    padding-bottom: 15px;
+}
+i{
+    @include fontSizeRisponsive(3rem, .25rem)
+}
+footer .p1{
+        @include fontSizeRisponsive(1.5rem, 0.25rem, 700);
+}
+footer .p2{
+        @include fontSizeRisponsive(1rem, 0.15rem, 700);
+}
+
+header li{
+     font-size: clamp(2.5rem, 4vw, 4rem);
+        font-weight: 700;
+
+        @include responsive($l) {
+          font-size: 2.5rem;
+        }
+}

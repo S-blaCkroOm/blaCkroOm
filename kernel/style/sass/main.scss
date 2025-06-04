@@ -1,0 +1,23 @@
+/////////////////base/////////////////
+@use "core/base/reset.scss";
+@use "core/base/base.scss";
+@use "core/base/font.scss";
+@use "core/base/typography.scss";
+////////////////abstracts///////////////////
+@use "core/abstracts/mixin.scss" as *;
+@use "core/abstracts/variables.scss" as *;
+@use "core/abstracts/class.scss" as *;
+///////////////////////////////////////////////
+@use "core/components/components.scss";
+////////////////////section///////////////////////////
+@use "core/section/intro.scss";
+@use "core/section/header.scss";
+@use "core/section/hero.scss";
+@use "core/section/responsive.scss";
+@use "core/section/performance.scss";
+@use "core/section/UI-UX.scss";
+@use "core/section/language.scss";
+@use "core/section/portfolio.scss";
+@use "core/section/contact.scss";
+@use "core/section/footer.scss";
+ 

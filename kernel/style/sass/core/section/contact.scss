@@ -1,0 +1,21 @@
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+#contact {
+  .icon {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    i {
+      transition: 0.5s;
+      @include responsive($xl) {
+        &:hover {
+          color: $distinctiveTextColor;
+          rotate: 20deg;
+          scale: 1.5;
+        }
+      }
+    }
+  }
+}

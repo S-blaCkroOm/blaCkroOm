@@ -1,0 +1,25 @@
+@use "../abstracts/mixin.scss" as *;
+@use "../abstracts/variables.scss" as *;
+#language {
+  .p {
+    @include lineBottom;
+    padding-bottom: 20px;
+  }
+
+  .btn {
+    @include flexCenter;
+    margin: 50px 0;
+    button {
+      padding: 3px 50px;
+      @include responsive($s) {
+        padding: 0 60px;
+      }
+      @include responsive($l) {
+        padding: 0 80px;
+      }
+      &:hover {
+        color: $distinctiveTextColor;
+      }
+    }
+  }
+}
