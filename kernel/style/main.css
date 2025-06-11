@@ -640,8 +640,10 @@ section {
 }
 
 #responsive .devices {
-  position: relative;
   height: 300px;
+  display: grid;
+  place-items: center;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   #responsive .devices {
@@ -662,10 +664,8 @@ section {
   border-radius: 8px;
   border: 1px solid rgb(70, 70, 70);
   box-shadow: 0 0 4px #323232, 0 0 6px rgba(50, 50, 50, 0.6), 0 0 8px rgba(50, 50, 50, 0.5), 0 0 10px rgba(50, 50, 50, 0.4);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  grid-row: 1;
+  grid-column: 1;
 }
 #responsive .d1 {
   width: calc(1920px / 6);
