@@ -7,15 +7,13 @@ export function runHero() {
   const button = hero.querySelector("button");
 
   const colors = {
-  blood: "#7e0d13",
-  default: "#a9a9a9",
-};
+    blood: "#7e0d13",
+    default: "#a9a9a9",
+  };
 
   const splitH2 = SplitText.create(h2, { type: "words", wordsClass: "word++" });
   const splitP = SplitText.create(p, {
-    type: "lines",
-    mask: "lines",
-    linesClass: "line++",
+    type: "words",
   });
   const splitButton = SplitText.create(button, {
     type: "words",
@@ -48,13 +46,18 @@ export function runHero() {
         },
         "<"
       )
-      .to(splitH2.words[2], { color: colors.blood, fontFamily: "Poiret One" }, "<")
+      .to(
+        splitH2.words[2],
+        { color: colors.blood, fontFamily: "Poiret One" },
+        "<"
+      )
       .from(
-        splitP.lines,
+        splitP.words,
         {
-          x: "-100vw",
-          duration: 1,
-          stagger: 1,
+          autoAlpha: 0,
+          x: 100,
+          duration: 0.3,
+          stagger: 0.1,
         },
         "<"
       )
@@ -67,7 +70,7 @@ export function runHero() {
           duration: 1,
         },
         "<"
-      )
+      );
     scrollTL
       .from(button, {
         rotate: 30,
@@ -86,10 +89,16 @@ export function runHero() {
         color: colors.blood,
         fontFamily: "Poiret One",
       });
-      gsap.to(splitButton.words[1], { color: colors.default, fontFamily: "Outfit" });
+      gsap.to(splitButton.words[1], {
+        color: colors.default,
+        fontFamily: "Outfit",
+      });
     });
     button.addEventListener("mouseleave", () => {
-      gsap.to(splitButton.words[0], { color: colors.default, fontFamily: "Outfit" });
+      gsap.to(splitButton.words[0], {
+        color: colors.default,
+        fontFamily: "Outfit",
+      });
       gsap.to(splitButton.words[1], {
         color: colors.blood,
         fontFamily: "Poiret One",

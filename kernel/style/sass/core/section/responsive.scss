@@ -3,6 +3,8 @@
 
 #responsive {
   .devices {
+    display: grid;
+    place-items: center;
     position: relative;
     height: 300px;
 
@@ -22,7 +24,8 @@
   .d {
     border-radius: 8px;
     @include borderShadow;
-    @include positionCenter;
+    grid-row: 1;
+    grid-column: 1;
   }
 
   .d1 {

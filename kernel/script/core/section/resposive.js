@@ -1,13 +1,13 @@
 export function runResponsive() {
   const responsive = document.getElementById("responsive");
-  if (!responsive) return; 
+  if (!responsive) return;
 
   const h2 = responsive.querySelector("h2");
   const p = responsive.querySelector("p");
   const img = responsive.querySelectorAll(".d");
 
   const splitH2 = SplitText.create(h2, { type: "chars" });
-  const splitP = SplitText.create(p, { type: "lines", mask: "lines" });
+  const splitP = SplitText.create(p, { type: "words" });
 
   const tl = gsap.timeline({
     defaults: { ease: "power2.inOut" },
@@ -26,12 +26,12 @@ export function runResponsive() {
     autoAlpha: 0,
     stagger: 0.1,
   })
-    .from(splitP.lines, {
-      duration: 2,
+    .from(splitP.words, {
+      duration: 0.3,
       autoAlpha: 0,
       x: "-100vw",
       filter: "blur(10px)",
-      stagger: 0.2,
+      stagger: 0.1,
     })
     .from(img, {
       autoAlpha: 0,
