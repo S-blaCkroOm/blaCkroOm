@@ -3,10 +3,10 @@
 
 #responsive {
   .devices {
+    height: 300px;
     display: grid;
     place-items: center;
     position: relative;
-    height: 300px;
 
     @include responsive($s) {
       height: 530px;
